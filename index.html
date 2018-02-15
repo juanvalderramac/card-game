@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Card Game</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Make pairs</h1>
+	<div id="cards-container"></div>
+
+	<script>
+		var values = [
+			"card1", "card2", "card3",
+			"card1", "card2", "card3",
+			"card4", "card5", "card6",
+			"card4", "card5", "card6",
+			"card7", "card8", "card9",
+			"card7", "card8", "card9",
+			"card10", "card10"
+		];
+
+		var click1 = 0;
+		var click2 = 5;
+
+		drawCards();
+         
+      function drawCards() {
+      	for(var i = 0; i < 20; i++) {
+            if(values[i] == ""){
+                  $("#cards-container").append('<div class="card"></div>');
+            }
+			else if(i == click1) {
+				$("#cards-container").append('<img class="card" src="cards/' + values[click1] + '.png">');
+			}
+			else if(i == click2) {
+				$("#cards-container").append('<img class="card" src="cards/' + values[click2] + '.png">');
+			}
+			else {
+				$("#cards-container").append('<img class="card" src="cards/reverse.png">');
+			}
+		}
+	}
+		
+	</script>
+</body>
+</html>

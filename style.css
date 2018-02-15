@@ -1,0 +1,10 @@
+body {
+	text-align: center;
+	background-image: url(http://www.lol-wallpapers.com/wp-content/uploads/2017/06/Classic-Kayn-Splash-Art-HD-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg);
+	background-position: top;
+}
+
+.card {
+	width: 120px;
+	margin: 0 2px;
+}
